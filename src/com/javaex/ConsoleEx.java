@@ -78,5 +78,5 @@ public class ConsoleEx {
 		System.out.println("\\: 역슬래시");		//	\\	->	\ 로 표시 된다.
 		
 	}
-	//	Git 테스트를 위한 임시 주석
+	//	Git 테스트를 위한 임시 주석.
 }
