@@ -22,7 +22,9 @@ public class ConditionalEx {
 //		ifEx();
 //		ifEx2();
 //		ifPractice01();
-		switchEx();
+//		switchEx();
+//		switchEx2();
+		switchPractice();
 	}
 	
 	
@@ -143,8 +145,11 @@ public class ConditionalEx {
 			break;
 		}
 			
-		scanner.close();
-		
+		scanner.close();		
+
+	}
+	
+	private static void switchEx2() {
 		//
 //		[문제]
 //				월을 입력받아 해당월의 일수를 출력하는
@@ -162,23 +167,28 @@ public class ConditionalEx {
 //				11월이면 “30일”
 //				12월이면 “31일”	
 		//
-//		System.out.println("월을 입력하세요.");	
-//		Scanner scanner = new Scanner(System.in);
-//		int code = scanner.nextInt();
-//		
-//		switch (code) {
-//		case 1 : 
-//			System.out.println("31일 입니다.");
-//			break;
-//		case 2 : 
-//			System.out.println("28일 입니다.");
-//			break;
+		System.out.print("월을 입력하세요:");	
+//		1, 3, 5, 7, 8, 10, 12월 - > 31일
+//		2월 -> 28일
+//		4, 6, 9, 11월 -> 30일
+		
+		
+		Scanner scanner = new Scanner(System.in);
+		int code = scanner.nextInt();
+		
+		switch (code) {
+		case 1 , 3 , 5 , 7 , 8 , 10 , 12: 
+			System.out.println(code + "월은 31일 입니다.");
+			break;
+		case 2 : 
+			System.out.println(code + "월은 28일 입니다.");
+			break;
 //		case 3: 
 //			System.out.println("31일 입니다.");
 //			break;
-//		case 4:
-//			System.out.println("30일 입니다.");
-//			break;
+		case 4 , 6 , 9 , 11:
+			System.out.println(code + "월은 30일 입니다.");
+			break;
 //		case 5 : 
 //			System.out.println("31일 입니다.");
 //			break;
@@ -203,10 +213,44 @@ public class ConditionalEx {
 //		case 12:
 //			System.out.println("31일 입니다.");
 //			break;
-//		default :
-//			break;
-//	}
-//		scanner.close();
+		default :
+			System.out.println(code + "월이 어딨어?");
+			break;
+	}
+		scanner.close();
+	}
+	
+	private static void switchPractice() {
+//		TODO : 이 코드를 나중에 enum (열거형) 객체로 다시 만들 예정
+		
+//		문자열 변수에 문자열로 요일 정보를 입력
+//		"SUNDAY" 				-> 휴식
+//		"MONDAY" ~ "THURSDAY" 	-> 열공
+//		"FRIDAY" 				-> 열공 후 불금
+//		"SATURDAY" 				-> 주말
+		
+		String day = "MONDAY";
+		String action;
+		
+		switch (day) {
+		case "SUNDAY" :
+			action = "휴식";
+			break;
+		case "MONDAY":
+		case "TUSEDAY":
+		case "WENDEDAY":
+		case "THURSDAY":
+			action = "열공";
+			break;
+		case "SATURDAY" :
+			action = "주말";
+		default :
+			action = "여기는 어디?";
+			break;
+		}
+		
+		System.out.println(day + "에는 " + action);		
+		
 	}
 	
 }
