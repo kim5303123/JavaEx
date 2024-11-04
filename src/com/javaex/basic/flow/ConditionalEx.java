@@ -21,7 +21,8 @@ public class ConditionalEx {
 		 
 //		ifEx();
 //		ifEx2();
-		ifPractice01();
+//		ifPractice01();
+		switchEx();
 	}
 	
 	
@@ -99,7 +100,7 @@ public class ConditionalEx {
 		System.out.print("과목번호 : ");
 		int code = scanner.nextInt();
 		
-		
+	
 		if(code == 1) {
 			System.out.println("R101호 입니다.");
 		} else if (code == 2) {
@@ -113,26 +114,99 @@ public class ConditionalEx {
 		}
 		
 		scanner.close();
+	}
+	
+	private static void switchEx() {
+		System.out.println("과목을 선택하세요");
+		System.out.println("(1.자바  2.C  3.C++  4.파이썬)");
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("과목번호 : ");
+		int code = scanner.nextInt();
+		
+//		변수 값에 따른 조건 분기
+		
+		switch (code) {
+		case 1 : // code == 1 이면
+			System.out.println("R101호 입니다.");
+			break;
+		case 2 : // code == 2 이면
+			System.out.println("R202호 입니다.");
+			break;
+		case 3:  // code == 3 이면
+			System.out.println("R303호 입니다.");
+			break;
+		case 4:  // code == 4 이면
+			System.out.println("R404호 입니다.");
+			break;
+		default :// else
+			System.out.println("상담원에게 문의하세요.");
+			break;
+		}
+			
+		scanner.close();
 		
 		//
+//		[문제]
+//				월을 입력받아 해당월의 일수를 출력하는
+//				프로그램을 작성하세요
+//				1월이면 “31일”
+//				2월이면 “28일”
+//				3월이면 “31일”
+//				4월이면 “30일”
+//				5월이면 “31일”
+//				6월이면 “30일”
+//				7월이면 “31일”
+//				8월이면 “31일”
+//				9월이면 “30일”
+//				10월이면 “31일”
+//				11월이면 “30일”
+//				12월이면 “31일”	
+		//
+//		System.out.println("월을 입력하세요.");	
+//		Scanner scanner = new Scanner(System.in);
+//		int code = scanner.nextInt();
+//		
 //		switch (code) {
 //		case 1 : 
-//			System.out.println("R101호 입니다.");
+//			System.out.println("31일 입니다.");
 //			break;
 //		case 2 : 
-//			System.out.println("R202호 입니다.");
+//			System.out.println("28일 입니다.");
 //			break;
 //		case 3: 
-//			System.out.println("R303호 입니다.");
+//			System.out.println("31일 입니다.");
 //			break;
 //		case 4:
-//			System.out.println("R404호 입니다.");
+//			System.out.println("30일 입니다.");
+//			break;
+//		case 5 : 
+//			System.out.println("31일 입니다.");
+//			break;
+//		case 6 : 
+//			System.out.println("30일 입니다.");
+//			break;
+//		case 7: 
+//			System.out.println("31일 입니다.");
+//			break;
+//		case 8:
+//			System.out.println("31일 입니다.");
+//			break;
+//		case 9 : 
+//			System.out.println("30일 입니다.");
+//			break;
+//		case 10 : 
+//			System.out.println("31일 입니다.");
+//			break;
+//		case 11: 
+//			System.out.println("30일 입니다.");
+//			break;
+//		case 12:
+//			System.out.println("31일 입니다.");
 //			break;
 //		default :
-//			System.out.println("상담원에게 문의하세요.");
 //			break;
-//		//
 //	}
+//		scanner.close();
 	}
+	
 }
-
