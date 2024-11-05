@@ -33,14 +33,23 @@ public class Ex08 {
 	private static void Practice02() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("키와 몸무게를 입력해 주십시오.");
-		System.out.println("키: ");
-		System.out.println("몸무게: ");
+		System.out.print("키: ");
 		int height = sc.nextInt();
+		System.out.print("몸무게: ");
 		int weight = sc.nextInt();
+		int bmi = height / weight; 
 		
-		if(height / weight <= 18.5) {
-			
-		} 
+//		18.5 <= BMI <= 24.9
+		if(bmi >=18.5 && bmi <=24.9) {
+			System.out.println(bmi);
+			System.out.println("정상");
+		} else if(bmi <=18.5 && bmi >=24.9) {
+			System.out.println(bmi);
+			System.out.println("저체중");
+		} else {
+			System.out.println(bmi);
+			System.out.println("비만");
+		}
 		 
 	}
 		
