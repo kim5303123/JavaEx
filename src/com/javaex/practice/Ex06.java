@@ -3,6 +3,8 @@
  */
 package com.javaex.practice;
 
+import java.sql.Array;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -26,7 +28,8 @@ public class Ex06 {
 	 */
 	public static void main(String[] args) {
 //		Practice02();
-		Practice03();
+//		Practice03();
+		Practice04();
 			
 	}
 
@@ -58,6 +61,16 @@ public class Ex06 {
 			System.out.println(i);
 		}
 		
+		
+	}
+	
+	
+	private static void Practice04() {
+//		 Ex06 주어진 문자열의 공백을 ‘,’(콤마) 로 변경 후 출력하세요.
+		char c[] = {'T','h','i','s',' ','i','s',' ','a',' ','p','e','n','c','i','l'};
+		
+		System.out.println(Arrays.toString(c));
+		System.out.println(Arrays.toString(c).replace(" , ", "")); 
 		
 	}
 	

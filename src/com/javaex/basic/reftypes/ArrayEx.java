@@ -18,8 +18,8 @@ public class ArrayEx {
 	 * @return : void
 	 */
 	public static void main(String[] args) {
-//		usingArray();
-		multidimArrayEx();
+		usingArray();
+//		multidimArrayEx();
 		
 	}
 

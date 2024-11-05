@@ -26,8 +26,9 @@ public class Ex08 {
 	 * @return : void
 	 */
 	public static void main(String[] args) {
-		Practice02();
+//		Practice02();
 //		Practice03();
+		Practice04();
 	}
 	
 	private static void Practice02() {
@@ -52,6 +53,13 @@ public class Ex08 {
 		}
 		 
 	}
+	
+	private static void Practice04() {
+//		Ex08 배열을 사용하여 1~45까지의 숫자 중 임의의 6개의 숫자를 출력하세요-미니로또
+//		(중복체크 할 것)
 		
+		
+
+	}
 	
 }
