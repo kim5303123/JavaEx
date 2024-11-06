@@ -58,6 +58,28 @@ public class Ex08 {
 //		Ex08 배열을 사용하여 1~45까지의 숫자 중 임의의 6개의 숫자를 출력하세요-미니로또
 //		(중복체크 할 것)
 		
+//		Math 클래스 : 수학 상수, 수학 함수를 모아둔 클래스
+//		1 ~ 45까지의 정수 난수 6개를 추출하는 예제
+//		(int)(Math.random()*45)+1
+		
+		
+//		int lotto = 0;
+		
+//		for(int num = 0; (int)(Math.random()*45)+1 < 7 ; num++  ) {
+		for(int num = 0; num < 6 ; num++  ) {			
+			System.out.print((int)(Math.random()*45)+1);
+			System.out.print("\t");
+		}
+		System.out.println();
+//		while문 버전
+		
+		int num = 0;
+		
+		while(num < 6) {
+			System.out.print((int)(Math.random()*45)+1);
+			System.out.print("\t");
+			++num;
+		}
 		
 
 	}

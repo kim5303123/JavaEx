@@ -68,9 +68,13 @@ public class Ex06 {
 	private static void Practice04() {
 //		 Ex06 주어진 문자열의 공백을 ‘,’(콤마) 로 변경 후 출력하세요.
 		char c[] = {'T','h','i','s',' ','i','s',' ','a',' ','p','e','n','c','i','l'};
+				
+		String d = Arrays.toString(c).replace(", ", "");		
 		
-		System.out.println(Arrays.toString(c));
-		System.out.println(Arrays.toString(c).replace(" , ", "")); 
+		System.out.println(d.replace(" ", ","));
+		  
+		
+		
 		
 	}
 	
