@@ -11,6 +11,7 @@ package com.javaex.oop.goods.v2;
 class Goods {
 //	필드 선언	->	private
 //	정보는 은닉하고, Getter와 Setter를 통한 우회 접근이 필요
+//	데이터를 다루는 기능 (메서드) 함께 출력
 	private String name; 
 	private int price;
 	
@@ -31,6 +32,12 @@ class Goods {
 	public void setPrice(int price) {
 //		this -> 현재 인스턴스 자체
 		this.price = price;
+	}
+	
+//	일반 메서드
+	public void showInfo() {
+		System.out.println("상품명:" + name);
+		System.out.printf("가격: %,d원%n", price);
 	}
 }
 
@@ -56,17 +63,21 @@ public class GoodsApp {
 		camera.setName("Nikon"); 
 		camera.setPrice(400_000);
 		
-		System.out.printf("%s - > %,d%n", camera.getName(), camera.getPrice());
+		camera.showInfo();
+//		System.out.printf("%s - > %,d%n", camera.name, camera.price);
+//		System.out.printf("%s - > %,d%n", camera.getName(), camera.getPrice());
 		
 		note.setName("LG그램");
 		note.setPrice(900_000);
 		
-		System.out.printf("%s - > %,d%n", note.getName(), note.getPrice());
+		note.showInfo();
+//		System.out.printf("%s - > %,d%n", note.getName(), note.getPrice());
 		
 		cup.setName("머그컵");
 		cup.setPrice(2_000);
 		
-		System.out.printf("%s - > %,d%n", cup.getName(), cup.getPrice());
+		cup.showInfo();
+//		System.out.printf("%s - > %,d%n", cup.getName(), cup.getPrice());
 		
 		
 	}
