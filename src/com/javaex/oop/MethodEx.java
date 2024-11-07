@@ -29,11 +29,43 @@ public class MethodEx {
 //		printSum(10,20);
 		
 //		매개변수 O, 리턴 O
-		System.out.println(getSum(10,20)); 
-		System.out.println(getSum(10,20,30));
+//		System.out.println(getSum(10,20)); 
+//		System.out.println(getSum(10,20,30));
 		
+//		매개변수 개수를 알 수 없을때의 해결방법
+//		첫번째 방법 :  배열을 전달한다.
+		System.out.println("getSumArray : " + getSumArray(new double[] { 1, 2, 3, 4, 5, 6, 7, 8 }));
 		
+//		두번째 방법 : 가변 인수를 사용
+		System.out.println("getSumVar : " + getSumVar(1,2,3,4,5,6,7,8));
 	}
+
+//	첫번째 방법 :  배열을 전달한다.
+	private static double getSumArray(double[] values) {
+		
+		double total = 0;
+		
+		for(int i = 0; i < values.length ; i++) {
+			total += values[i];
+		}
+		
+		return total;
+		
+  
+	}
+	
+//	두번째 방법 : 가변인수를 사용
+	private static double getSumVar(double ... values) {
+		
+		double total = 0;
+		
+		for (double value : values) {
+			total += value;
+		}
+		
+		return total;
+	}
+	
 
 //	매개변수 X -> 파라미터 X
 //	return X -> void
