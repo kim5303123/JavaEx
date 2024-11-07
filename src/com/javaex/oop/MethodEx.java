@@ -38,6 +38,11 @@ public class MethodEx {
 		
 //		두번째 방법 : 가변 인수를 사용
 		System.out.println("getSumVar : " + getSumVar(1,2,3,4,5,6,7,8));
+		
+//		일반 매개 변수와 가변 매개변수를 함께 사용 할 때 
+//		일반 매개변수 먼저, 그 다음 가변인수를 나중에 선언
+		printSum("합산값", 1, 2, 3, 4, 5, 6, 7, 8);
+		
 	}
 
 //	첫번째 방법 :  배열을 전달한다.
@@ -66,7 +71,14 @@ public class MethodEx {
 		return total;
 	}
 	
-
+//	일반 매개 변수와 가변 매개변수를 함께 사용 할 때 
+//	일반 매개변수 먼저, 그 다음 가변인수를 나중에 선언
+	private static void printSum(String message, double ... values) {
+		
+		System.out.println(message + " : " + getSumVar(values));
+	}
+	
+	
 //	매개변수 X -> 파라미터 X
 //	return X -> void
 	private static void printMessage() {
