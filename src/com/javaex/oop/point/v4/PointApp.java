@@ -117,12 +117,20 @@ class ColorPoint extends Point {
 	public void draw(boolean bShow) {
 		
 		String message = String.format("색상점[x=%d, y=%d, color=%s]를 " , x, y, color);
+		
+//		message += bShow ? "그렸습니다.": "지웠습니다.";
+		
 		if (bShow)
 			message += "그렸습니다.";
 		else
 			message += "지웠습니다.";
 		
 		System.out.println(message);
+		
+//		오버라이드 했지만, 부모의 기능을 사용해야 할 때
+//		오버라이드 했다고 없어지는게 아니다. (덮어쓴다고 사라지는게 아니고 필요할 때 사용가능)
+		super.draw(bShow);
+		
 	}
 	
 	
