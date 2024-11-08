@@ -35,6 +35,9 @@ public class StaticExApp {
 			
 		}
 		
+//		static 클래스 : 생성자를 생성하지 않아도 마음대로 호출해서 사용할 수 있다.
+		System.out.println(Calc.PI);
+		System.out.println(Calc.getSum(1,2,3,4,5));
 		
 	}
 
