@@ -19,11 +19,13 @@ public class Rectangle extends Shape {
 		this.height = height;
 	}
 	
-	
+	@Override
 	public double area() {
 		return width * height;
 	}
 	
+	
+	@Override
 	public void draw() {
 		System.out.printf("사각형 [x=%d, y=%d, w=%d, h=%d, area=%f]" + "을 그렸어요%n", x , y, width, height, area());
 	}
