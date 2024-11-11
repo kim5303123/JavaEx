@@ -20,7 +20,8 @@ public class StringEx {
 	public static void main(String[] args) {
 	
 //		stringBasic();
-		usefulMethods();
+//		usefulMethods();
+		stringBufferEx();
 	}
 	
 	private static void stringBasic() {
@@ -102,4 +103,38 @@ public class StringEx {
 		
 	}
 	
+	private static void stringBufferEx() {
+//		String 클래스는 immutable
+//		StringBuffer 클래스는 mutable
+//		내부적으로 Buffer를 통해서 문자열을 만들고
+//		최종적으로 String을 반환한다.
+		
+//		버퍼의 생성
+		StringBuffer sb = new StringBuffer("This");
+		
+//		문자열 추가 : append()
+		sb.append(" is pencil");
+		
+//		문자열 삽입 : insert()
+		sb.insert(7, " my");
+		
+//		문자열 치환 : replace()
+		sb.replace(7, 10, " your");
+		System.out.println(sb);
+		
+//		버퍼 길이 변경
+		sb.setLength(10);		
+		System.out.println(sb);
+		
+//		메서드 체이닝 기법 활용 가능
+		StringBuffer sb2 = new StringBuffer("This").append(" is pencil").insert(7, " my").replace(7, 10, " your");
+		String s = sb2.toString();	//	문자열로 변환
+		
+		System.out.println(s);
+		
+		
+	}
+	
 }
+
+
