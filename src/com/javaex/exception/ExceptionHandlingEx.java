@@ -19,8 +19,37 @@ public class ExceptionHandlingEx {
 	 * @return : void
 	 */
 	public static void main(String[] args) {
-		arithExceptionEx();
+//		arithExceptionEx();
+		arrayExceptionEx();
+		nullpointerExceptionEx();
 	}
+	
+	private static void arrayExceptionEx() {
+		int[] intArray = new int[] {
+				3, 6, 9
+		};
+		
+		try {
+			System.out.println(intArray[3]);
+		} 
+		catch (ArrayIndexOutOfBoundsException e) {
+			System.err.println("Error:" + e.getMessage());
+			
+		}
+	}
+	
+	private static void nullpointerExceptionEx() {
+		String str = new String("Hello Java");
+		
+		try {
+			str = null;
+			System.out.println(str.toUpperCase());
+		} 
+		catch (NullPointerException e) {
+			System.err.println("null 입니다.");
+		}
+	}
+	
 	
 	private static void arithExceptionEx() {
 //		스캐너에서 정수 입력
