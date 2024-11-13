@@ -4,6 +4,7 @@
 package com.javaex.collection.list;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -49,7 +50,17 @@ public class ListEx {
 //		요소 개수 확인
 		System.out.println("size= " + lst.size());
 		
-//		TODO: 리스트의 순회
+//		List와 set은 Iterator 반복자를 사용
+		System.out.println("===== Iterator");
+		Iterator<String> it = lst.iterator();
+		
+		while(it.hasNext()) {
+//			다음 요소 받아오고 이동
+			String item = it.next();
+			System.out.println(item);
+		}
+		
+		System.out.println();
 //		리스트 비우기
 		lst.clear();
 		System.out.println(lst);
