@@ -22,7 +22,7 @@ public class DataStreamEx {
 //		C:\Users\202-12\eclipse-workspace\JavaEx\files\
 	static final String rootPath = System.getProperty("user.dir") + "\\files\\";
 	static final String filename = rootPath + "primitives.txt";
-	
+
 	
 	/**
 	 * @Author : 202-12
